@@ -1,0 +1,12 @@
+.banner {
+    position: relative;
+    height: 448px;
+    color: white;
+    object-fit: contain;
+}
+
+.banner_contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    
+}

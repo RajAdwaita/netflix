@@ -24,7 +24,7 @@
     object-fit: contain;
     padding-left: 20px;
     cursor: pointer;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .nav_avatar {

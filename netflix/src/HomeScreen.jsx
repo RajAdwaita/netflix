@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner';
 import './HomeScreen.css';
 import Nav from './Nav';
 function HomeScreen() {
@@ -6,38 +7,11 @@ function HomeScreen() {
         <div className='homeScreen'>
             <Nav />
 
+            <Banner />
 
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
-            <h1>TEST</h1>
+
+
+
 
 
 
