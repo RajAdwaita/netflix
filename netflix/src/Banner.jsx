@@ -24,6 +24,7 @@ function Banner() {
                 </div>
                 <h1 className="banner_description">
                     Test Description
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ratione nulla odio esse dolorem mollitia! Nam reprehenderit, natus minus repellendus maxime modi unde sequi velit. Quae autem ab adipisci commodi.
                 </h1>
             </div>
             <div className="banner--fadeBottom" />
