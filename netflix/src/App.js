@@ -6,7 +6,8 @@ import HomeScreen from "./HomeScreen";
 function App() {
   return (
     <div className="app">
-      <HomeScreen />
+      {/* <HomeScreen /> */}
+      <h1>Lets build</h1>
     </div>
   );
 }
