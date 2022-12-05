@@ -1,5 +1,8 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./Banner.css";
+import axios from './axios'
+import requests from './Requests'
 
 function Banner() {
     function truncate(string, n) {
@@ -8,12 +11,36 @@ function Banner() {
     }
 
 
+    const [movie, setMovie] = useState([]);
+
+
+    useEffect(() => {
+
+        async function fetchData() {
+            const request = await axios.get(requests.fetchNetflixOriginals);
+            setMovie(
+                request.data.results[
+                Math.floor(Math.random() * request.data.results.length - 1)
+                ]
+            );
+            return request;
+        }
+        fetchData();
+
+
+
+
+    }, [])
+
+
+
+
     return (
         <header
             className="banner"
             style={{
                 // backgroundImage: `url("https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media//banner.jpg")`,
-                backgroundImage: `url("https://wallpapercave.com/wp/wp8741529.jpg")`,
+                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
 
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
@@ -21,7 +48,7 @@ function Banner() {
         >
 
             <div className="banner_contents">
-                <h1 className="banner_title">Movie Name</h1>
+                <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
                 <div className="banner_buttons">
                     <button className="banner_button">Play</button>
                     <button className="banner_button">My List</button>
@@ -29,7 +56,7 @@ function Banner() {
 
                 </div>
                 <h1 className="banner_description">
-                    {truncate(`Test Description                     Lorem ipsum dolor sit amet consectetur adipisicing elit.Distinctio ratione nulla odio esse dolorem mollitia! Nam reprehenderit, natus minus repellendus maxime modi unde sequi velit.Quae autem ab adipisci commodi.`, 150)}
+                    {truncate(movie?.overview, 150)}
                 </h1>
             </div>
             <div className="banner--fadeBottom" />
