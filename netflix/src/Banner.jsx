@@ -2,6 +2,12 @@ import React from "react";
 import "./Banner.css";
 
 function Banner() {
+    function truncate(string, n) {
+        return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+
+    }
+
+
     return (
         <header
             className="banner"
@@ -23,8 +29,7 @@ function Banner() {
 
                 </div>
                 <h1 className="banner_description">
-                    Test Description
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ratione nulla odio esse dolorem mollitia! Nam reprehenderit, natus minus repellendus maxime modi unde sequi velit. Quae autem ab adipisci commodi.
+                    {truncate(`Test Description                     Lorem ipsum dolor sit amet consectetur adipisicing elit.Distinctio ratione nulla odio esse dolorem mollitia! Nam reprehenderit, natus minus repellendus maxime modi unde sequi velit.Quae autem ab adipisci commodi.`, 150)}
                 </h1>
             </div>
             <div className="banner--fadeBottom" />
