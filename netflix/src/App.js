@@ -15,6 +15,7 @@ import {
 import { useEffect } from "react";
 import { auth } from "./firebase";
 import { logout, login, selectUser } from "./features/userSlice";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   const user = useSelector(selectUser);
@@ -53,6 +54,9 @@ function App() {
           <LoginScreen />
         ) : (
           <Routes>
+
+            <Route exact path="/profile" element={<ProfileScreen />} />
+
 
 
             <Route exact path="/" element={<HomeScreen />} />
