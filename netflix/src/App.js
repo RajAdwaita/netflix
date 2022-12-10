@@ -35,14 +35,14 @@ function App() {
         }));
       } else {
         //Logged out
-        dispatch(logout);
+        dispatch(logout());
         // console.log
 
       }
     })
     return unsubscribe;
 
-  }, [])
+  }, [dispatch])
 
 
   return (
