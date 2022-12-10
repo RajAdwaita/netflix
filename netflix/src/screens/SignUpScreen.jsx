@@ -30,7 +30,7 @@ function SignUpScreen() {
             emailRef.current.value,
             passwordRef.current.value).then((authUser) => {
                 console.log(authUser);
-            }).catch(error => {
+            }).catch(error => { 
                 alert(error.message)
             });
     }
